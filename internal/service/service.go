@@ -1,8 +1,12 @@
 package service
 
-import "github.com/senyabanana/todo-app/internal/repository"
+import (
+	"github.com/senyabanana/todo-app/internal/entity"
+	"github.com/senyabanana/todo-app/internal/repository"
+)
 
 type Authorization interface {
+	CreateUser(user entity.User) (int, error)
 }
 
 type TodoLists interface {
@@ -18,5 +22,7 @@ type Service struct {
 }
 
 func NewService(repos *repository.Repository) *Service {
-	return &Service{}
+	return &Service{
+		Authorization: NewAuthService(repos.Authorization),
+	}
 }

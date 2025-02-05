@@ -2,8 +2,16 @@ package database
 
 import (
 	"fmt"
-	
+
 	"github.com/jmoiron/sqlx"
+)
+
+const (
+	UsersTable      = "users"
+	TodoListsTable  = "todo_lists"
+	UsersListsTable = "users_lists"
+	TodoItemsTable  = "todo_items"
+	ListsItemsTable = "lists_items"
 )
 
 type Config struct {
