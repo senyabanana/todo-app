@@ -3,13 +3,14 @@ package main
 import (
 	"os"
 
-	"github.com/joho/godotenv"
-	_ "github.com/lib/pq"
 	"github.com/senyabanana/todo-app/internal/database"
 	"github.com/senyabanana/todo-app/internal/handler"
 	"github.com/senyabanana/todo-app/internal/repository"
 	"github.com/senyabanana/todo-app/internal/server"
 	"github.com/senyabanana/todo-app/internal/service"
+	
+	"github.com/joho/godotenv"
+	_ "github.com/lib/pq"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 )
